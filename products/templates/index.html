@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!-- code for base.html comes from site of getbootstrap starter template -->
+
+<!-- index.html is the main page, index.html is basically importing base.html using above
+and the below add-on part of the code is added in displayed html by the two lines of code
+ added in base.html, as an experiment if you comment out those two lines in base.html then
+ the base.html (whose task is formatting and other tabs) will not be displayed in resulted
+ html on browser -->
+
+{%block content%}
+<h1>Products</h1>
+<div class="row">
+    {% for product in products %}
+        <div class="col">
+        <!-- Here goes the card component template, rest all is self written :) -->
+        <div class="card" style="width: 18rem;">
+            <img src="{{product.image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">(₹{{product.price}})</p>
+                <a href="#" class="btn btn-primary">Buy Now!</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock%}
