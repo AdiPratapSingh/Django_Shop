@@ -1,66 +1,109 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Welcome to Robo Club!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </head>
 <body>
+<style>
+    .collapse{
+    margin-left:auto;
+    width:20vw;
+    }
+</style>
 
 <!--##################################### Part which I have added #####################################-->
 
 <!-- This is the code from getbootstrap for navigation bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"> Fruit Shop </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">navbar navbar-dark bg-dark-->
+<section id="nav_bar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light " >
+        <a class="navbar-brand" href="#">
+            <img width= "40%" src="https://roboticsclubiitk.github.io/assets/images/logo.png" alt="RoboClub IITK">
+        </a>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.eng.yale.edu/grablab/roboticscourseware/courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://roboticsclubiitk.github.io/faculty/">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://roboticsclubiitk.github.io/alumni/">Alumni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin" >Admin</a>
+                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+<!--                           data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                            Options-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                            &lt;!&ndash;                        <li><a class="dropdown-item" href="#">Action</a></li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <li><a class="dropdown-item" href="#">Another action</a></li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            <hr class="dropdown-divider">&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                        <li><a class="dropdown-item" href="#">Something else here</a></li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <!--                <li class="nav-item">-->
+                    <!--                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+                    <!--                </li>-->
+                </ul>
+                <!--            <form class="d-flex">-->
+                <!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+                <!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
+                <!--            </form>-->
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
+</section>
 <!-- Those two lines about which is said in index.html -->
 <div class="container">
     {% block content %}     <!-- my edits-->
     {% endblock %}
+</div>
+
+<!------------------------------------------------ footer ka code ----------------------------------------------------->
+
+<div class="footer mb-0">
+        <div class="social">
+            <a href="https://www.facebook.com/roboclubiitkanpur" class="fa fa-facebook"></a>
+            <a href="https://github.com/RoboticsClubIITK" class="fa fa-github"></a>
+            <a href="https://www.youtube.com/channel/UCWM9ZaOmev5otSwQqW3JICA" class="fa fa-youtube"></a>
+            <a href="mailto:roboticsclubiitkanpur@gmail.com" class="fa fa-envelope"></a>
+        </div>
+        <div class="developername">
+            Developed by : Adi Pratap Singh
+        </div>
+        <div class="developercontact" >
+            Contact info : adips20@iitk.ac.in
+        </div>
+<!--        <div class="copyright">-->
+<!--            &#169 2021 Robotics Club IITK-->
+<!--        </div>-->
+        <div class="py-4">
+                © Copyright <strong><span>Robotics Club IITK</span></strong>. All Rights Reserved
+         </div>
 </div>
 
 <!--########################################### Till here ############################################-->

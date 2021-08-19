@@ -1,11 +1,14 @@
 from django.db import models
 
 
+# In order to connect with database ```python3 manage.py makemigrations```
+# then `python3 manage.py migrate`
 class Products(models.Model):          # Class name will be displayed on website
     name = models.CharField(max_length=255)
     price = models.FloatField()
     stock = models.IntegerField()
-    image_url = models.CharField(max_length=2053)
+    image_url = models.CharField(max_length=2083)
+    Buy_link = models.CharField(max_length=2083)
 
 
 class Offer(models.Model):

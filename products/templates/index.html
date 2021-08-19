@@ -8,20 +8,40 @@ and the below add-on part of the code is added in displayed html by the two line
  html on browser -->
 
 {%block content%}
-<h1>Products</h1>
-<div class="row">
-    {% for product in products %}
-        <div class="col">
-        <!-- Here goes the card component template, rest all is self written :) -->
-        <div class="card" style="width: 18rem;">
-            <img src="{{product.image_url}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">(₹{{product.price}})</p>
-                <a href="#" class="btn btn-primary">Buy Now!</a>
+<!--<h1>Assessories</h1>-->
+<!--<h1 data-v-516e3bd8="" class="white&#45;&#45;text" align="center">Assessories</h1>-->
+<div class="line1"> <p>Hardware Shop</div></p>
+<!--<div class="row">-->
+<!--    {% for product in products %}-->
+<!--        <div class="col">-->
+<!--        &lt;!&ndash; Here goes the card component template, rest all is self written :) &ndash;&gt;-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="{{product.image_url}}" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">{{product.name}}</h5>-->
+<!--                <p class="card-text">(₹{{product.price}})</p>-->
+<!--                <a href="{{product.Buy_link}}" class="btn btn-primary">Buy Now!</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+<!----------------------------------------------------------->
+<div class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="moviecard">
+            {% for product in products %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{product.image_url}}" class="card-img-top p-2 movieimage" alt="...">
+                <div class="card-body cardbody">
+                  <h5 class="card-title moviehead">{{product.name}}</h5>
+                  <h6 class="card-title release">Cost : (₹{{product.price}})</h6>
+                  <!-- <p class="card-text details">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                  <a href="{{product.Buy_link}}" class="btn btn-danger w-100 play">Buy Now!</a>
+                </div>
+              </div>
             </div>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
-{%endblock%}
+<!------------------------------------------------>
+    {%endblock%}
