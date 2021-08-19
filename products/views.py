@@ -8,5 +8,5 @@ def index(request):
     return render(request, 'index.html', {'products': items})
 
 
-def new(request):
-    return HttpResponse('New Page html')
+def about(request):
+    return HttpResponse(render(request, 'about.html'))

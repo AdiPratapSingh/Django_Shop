@@ -8,18 +8,23 @@
     width: a;
 }
 
-.line1 p{
+.line1{
     text-align: center;
     font-size: 4rem;
     font-weight: bolder;
     font-weight: 1200;
-    color: #ffffff;
+    color: #000000;
     margin-top: 60px;
-    font-family: 'Qualy', sans-serif;
+    font-family: "Chalkduster", fantasy;
     letter-spacing: 0em;
-    -webkit-text-stroke:3px rgb(0, 0, 0);
-    cursor:default;
+}
 
+.aboutheading{
+    margin-top: 100px;
+}
+
+.about{
+    font-family: "Roboto", sans-serif;
 }
 .footer{
     height:40vh;
