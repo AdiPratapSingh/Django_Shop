@@ -1,21 +1,7 @@
 asgiref==3.4.1
 Django==3.2.6
-dynamic-reconfigure==1.6.3
-gencpp==0.6.5
-geneus==2.2.6
-genlisp==0.4.16
-genmsg==0.5.16
-gennodejs==2.0.1
-genpy==0.6.16
-geodesy==0.5.3
 gunicorn==20.1.0
-interactive-markers==1.11.5
-kdl-parser-py==1.13.1
-master-discovery-fkie==0.8.12
-master-sync-fkie==0.8.12
-message-filters==1.14.12
 pytz==2021.3
-resource-retriever==1.12.6
 sqlparse==0.4.2
 typing-extensions==4.0.1
 
